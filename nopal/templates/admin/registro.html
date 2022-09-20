@@ -1,0 +1,31 @@
+{% extends 'partials/body.html' %}
+  {% load crispy_forms_tags %}
+  {% block title %}{{title_pag}} - El Nopal Supermercado{% endblock title %}
+  {% load static %}
+  {% block contenido %}
+
+  <div class="border p-3 rounded shadow mt-3 card mx-auto my-2" id="mode-cards">
+    <figure class="p-0">
+        <img class=" img_iniciosesion  mx-auto d-block img-fluid"  style="width: 450px; height: 230px;" src="{% static 'img/logo.png' %}" alt="">
+    </figure>
+    <h3 class="text-start">Registro Usuario </h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn-success " value="crear cuenta">
+        </div>
+    </form>
+</div>
+
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <strong>{{ message }}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% include 'partials/accesibilidad.html' %}
+  {% endblock %}
