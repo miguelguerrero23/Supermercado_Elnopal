@@ -35,11 +35,11 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td class="texto">{{register.name}}</td>
-                                    <td class="texto">{{register.phone}}</td>
-                                    <td class="texto">{{register.email}}</td>
-                                    <td class="texto"><a href="{%url 'provider-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
-                                        <a href="{%url 'provider-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a> 
+                                    <td class="text">{{register.name}}</td>
+                                    <td class="text">{{register.phone}}</td>
+                                    <td class="text">{{register.email}}</td>
+                                    <td class="text"><a href="{%url 'provider-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
+                                        <a href="{%url 'provider-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="delete" alt=""></a> 
                                     </td>    
                                 </tr>
                             {% endif %}

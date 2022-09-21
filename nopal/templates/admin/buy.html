@@ -4,13 +4,13 @@
 {% load static %}
 {% block contenido %}
 
-<div >
-    <section class="container  p-5 h-auto" id="mode-cards" data-admin id="cuerpo" style="width: 95%">
+<div>
+    <section class="container p-5 h-auto" data-admin id="cuerpo" style="width: 95%">
         <h1>Gestionar {{title_pag}}</h1>
         <div class="row my-4">
             <div class="col-md-4">
                 <div class="border p-3 rounded shadow mt-3" id="mode-cards">
-                    <h3 class="text-start">Nuevo Registro </h3>
+                    <h3 class="text-start">Nuevo Registro</h3>
                     <form action="" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{form|crispy}}
@@ -39,15 +39,15 @@
                     {% for register in registers %}
                             {% if register.statusBuy %}
                                 <tr>
-                                    <td class="texto">{{register.date}}</td>
-                                    <td class="texto">{{register.user}}</td>
-                                    <td class="texto">{{register.payment}}</td>
-                                    <td class="texto">{{register.status}}</td>
+                                    <td class="text">{{register.date}}</td>
+                                    <td class="text">{{register.user}}</td>
+                                    <td class="text">{{register.payment}}</td>
+                                    <td class="text">{{register.status}}</td>
                                     <td>
                                         {% if register.status == "Abierta" %}
                                             <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
                                             {% if user.is_staff %}
-                                            <a href="{% url 'buy-modal' modal='eliminar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar"  alt=""></a>
+                                            <a href="{% url 'buy-modal' modal='eliminar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="delete"  alt=""></a>
                                             {% endif %}
                                             <a href="{% url 'buy-detail' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/plus.svg' %}" alt=""></a> 
                                         {% elif register.status == "Cerrada" %}

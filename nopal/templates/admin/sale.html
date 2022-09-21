@@ -38,15 +38,15 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td class="texto">{{register.date}}</td>
-                                    <td class="texto">{{register.user}}</td>
-                                    <td class="texto">{{register.payment}}</td>
-                                    <td class="texto">{{register.status}}</td>
-                                    <td class="texto">{{register.client.title}} - {{register.nDocument}}/{{register.address}}</td>
-                                    <td class="texto">{% if register.status == "Abierta" %}
+                                    <td class="text">{{register.date}}</td>
+                                    <td class="text">{{register.user}}</td>
+                                    <td class="text">{{register.payment}}</td>
+                                    <td class="text">{{register.status}}</td>
+                                    <td class="text">{{register.client.title}} - {{register.nDocument}}/{{register.address}}</td>
+                                    <td class="text">{% if register.status == "Abierta" %}
                                         <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
                                         {% if user.is_staff %}
-                                        <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a>
+                                        <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="delete" alt=""></a>
                                         {% endif %}
                                         <a href="{% url 'sale-detail' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/plus.svg' %}" alt=""></a> 
                                     {% elif register.status == "Cerrada" %}

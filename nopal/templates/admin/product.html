@@ -41,17 +41,17 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td class="texto">{{register.name}}</td>
-                                    <td class="texto">{{register.price}}</td>
-                                    <td class="texto">{{register.description}}</td>
-                                    <td class="texto">{{register.subcategory.name}}</td>
-                                    <td class="texto">{{register.brand.name}}</td>
-                                    <td class="texto">{{register.expirationDate}}</td>
-                                    <td class="texto">{{register.unitMeasurement}}</td>
-                                    <td class="texto">{{register.stock}}</td>
-                                    <td class="texto">{{register.image.url}}</td>
+                                    <td class="text">{{register.name}}</td>
+                                    <td class="text">{{register.price}}</td>
+                                    <td class="text">{{register.description}}</td>
+                                    <td class="text">{{register.subcategory.name}}</td>
+                                    <td class="text">{{register.brand.name}}</td>
+                                    <td class="text">{{register.expirationDate}}</td>
+                                    <td class="text">{{register.unitMeasurement}}</td>
+                                    <td class="text">{{register.stock}}</td>
+                                    <td class="text">{{register.image.url}}</td>
                                     <td><a href="{%url 'product-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
-                                        <a href="{%url 'product-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a> 
+                                        <a href="{%url 'product-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="delete" alt=""></a> 
                                     </td>    
                                 </tr>
                             {% endif %}
