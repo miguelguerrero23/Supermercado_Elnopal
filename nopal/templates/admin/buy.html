@@ -39,10 +39,10 @@
                     {% for register in registers %}
                             {% if register.statusBuy %}
                                 <tr>
-                                    <td id="texto">{{register.date}}</td>
-                                    <td id="texto">{{register.user}}</td>
-                                    <td id="texto">{{register.payment}}</td>
-                                    <td id="texto">{{register.status}}</td>
+                                    <td class="texto">{{register.date}}</td>
+                                    <td class="texto">{{register.user}}</td>
+                                    <td class="texto">{{register.payment}}</td>
+                                    <td class="texto">{{register.status}}</td>
                                     <td>
                                         {% if register.status == "Abierta" %}
                                             <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>

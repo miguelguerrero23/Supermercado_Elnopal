@@ -35,10 +35,10 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td id="texto">{{register.name}}</td>
-                                    <td id="texto">{{register.phone}}</td>
-                                    <td id="texto">{{register.email}}</td>
-                                    <td id="texto"><a href="{%url 'provider-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
+                                    <td class="texto">{{register.name}}</td>
+                                    <td class="texto">{{register.phone}}</td>
+                                    <td class="texto">{{register.email}}</td>
+                                    <td class="texto"><a href="{%url 'provider-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
                                         <a href="{%url 'provider-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a> 
                                     </td>    
                                 </tr>

@@ -41,15 +41,15 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td id="texto">{{register.name}}</td>
-                                    <td id="texto">{{register.price}}</td>
-                                    <td id="texto">{{register.description}}</td>
-                                    <td id="texto">{{register.subcategory.name}}</td>
-                                    <td id="texto">{{register.brand.name}}</td>
-                                    <td id="texto">{{register.expirationDate}}</td>
-                                    <td id="texto">{{register.unitMeasurement}}</td>
-                                    <td id="texto">{{register.stock}}</td>
-                                    <td id="texto">{{register.image.url}}</td>
+                                    <td class="texto">{{register.name}}</td>
+                                    <td class="texto">{{register.price}}</td>
+                                    <td class="texto">{{register.description}}</td>
+                                    <td class="texto">{{register.subcategory.name}}</td>
+                                    <td class="texto">{{register.brand.name}}</td>
+                                    <td class="texto">{{register.expirationDate}}</td>
+                                    <td class="texto">{{register.unitMeasurement}}</td>
+                                    <td class="texto">{{register.stock}}</td>
+                                    <td class="texto">{{register.image.url}}</td>
                                     <td><a href="{%url 'product-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
                                         <a href="{%url 'product-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a> 
                                     </td>    

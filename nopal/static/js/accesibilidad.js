@@ -43,7 +43,7 @@ let darktheme = ()=>{
     const icons7 = document.querySelectorAll('#imprimir');
     const icons8 = document.querySelectorAll('#excel');
     const icons9 = document.querySelectorAll('#pdf');
-    const textcolor = document.querySelectorAll('#texto');
+    const textcolor = document.querySelectorAll('.texto');
     const mode_cards = document.querySelectorAll('#mode-cards')
     const modedark_admin = document.querySelectorAll('[data-admin]') 
     let colorTexto = document.querySelectorAll('[data-color]')

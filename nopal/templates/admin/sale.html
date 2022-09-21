@@ -38,12 +38,12 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td id="texto">{{register.date}}</td>
-                                    <td id="texto">{{register.user}}</td>
-                                    <td id="texto">{{register.payment}}</td>
-                                    <td id="texto">{{register.status}}</td>
-                                    <td id="texto">{{register.client.title}} - {{register.nDocument}}/{{register.address}}</td>
-                                    <td id="texto">{% if register.status == "Abierta" %}
+                                    <td class="texto">{{register.date}}</td>
+                                    <td class="texto">{{register.user}}</td>
+                                    <td class="texto">{{register.payment}}</td>
+                                    <td class="texto">{{register.status}}</td>
+                                    <td class="texto">{{register.client.title}} - {{register.nDocument}}/{{register.address}}</td>
+                                    <td class="texto">{% if register.status == "Abierta" %}
                                         <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
                                         {% if user.is_staff %}
                                         <a href="" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a>

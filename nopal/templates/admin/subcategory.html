@@ -35,9 +35,9 @@
                     {% for register in registers %}
                             {% if register.status %}
                                 <tr>
-                                    <td id="texto">{{register.name}}</td>
-                                    <td id="texto">{{register.category}}</td>
-                                    <td id="texto">{{register.image}}</td>
+                                    <td class="texto">{{register.name}}</td>
+                                    <td class="texto">{{register.category}}</td>
+                                    <td class="texto">{{register.image}}</td>
                                     <td><a href="{%url 'subcategory-modal' modal='editar' pk=register.id %}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/update.svg' %}" id="edit" alt=""></a>
                                         <a href="{%url 'subcategory-modal' modal='eliminar' pk=register.id%}" class="btn btn-md border"><img class="img-fluid" src="{% static 'img/icons/delete.svg' %}" id="eliminar" alt=""></a> 
                                     </td>    
